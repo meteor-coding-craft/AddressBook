@@ -1,0 +1,17 @@
+
+<head>
+    <title>Address Book</title>
+</head>
+
+<body>
+    <!--<div class="well">-->
+    <div class="card card-body bg-light mb-4"><!--1.10-->
+        {{>loginButtons}}
+    </div>
+
+    {{#if currentUser}}
+        {{>addressInput}}
+        {{>addressList}}
+    {{/if}}
+</body>
+
