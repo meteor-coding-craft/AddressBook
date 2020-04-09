@@ -1,8 +1,11 @@
 
 <template name="addressList">
-    <table class="table table-bordered table-condensed table-striped table-hover">
-        <thead>
-        <tr class="info">
+    <!--<table class="table table-bordered table-condensed table-striped table-hover">-->
+    <table class="table table-bordered table-striped table-hover"> <!--1.10-->
+        <!--<thead>-->
+        <thead class="thead-light"> <!--1.10-->
+        <!--<tr class="info">-->
+        <tr><!--1.10-->
             <th>이름</th>
             <th>전화번호</th>
             <th>이메일</th>
@@ -19,7 +22,8 @@
     </table>
     <div align="center">
         <button name="more" class="btn btn-primary">
-            <i class="glyphicon glyphicon-arrow-down"></i> 더보기
+            <!--<i class="glyphicon glyphicon-arrow-down"></i> 더보기-->
+            <i class="fas fa-long-arrow-alt-down"></i> 더보기
         </button>
     </div>
 </template>
@@ -28,14 +32,15 @@
     <!--<div class="well">-->
     <div class="card card-body bg-light mb-4"><!--1.10-->
         <div class="form-inline">
-            <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="이름">
-                <input type="text" class="form-control" name="phone" placeholder="전화번호">
-                <input type="text" class="form-control" name="email" placeholder="이메일">
-                <input type="text" class="form-control" name="company" placeholder="회사">
-                <input type="text" class="form-control" name="birthday" placeholder="생일">
+            <div class="form-group"> <!-- mr-1 넣었음 -->
+                <input type="text" class="form-control mr-1" name="name" placeholder="이름">
+                <input type="text" class="form-control mr-1" name="phone" placeholder="전화번호">
+                <input type="text" class="form-control mr-1" name="email" placeholder="이메일">
+                <input type="text" class="form-control mr-1" name="company" placeholder="회사">
+                <input type="text" class="form-control mr-1" name="birthday" placeholder="생일">
                 <button class="btn btn-info btn-sm" name="saveAddress">
-                    <i class="glyphicon glyphicon-ok"></i> 등록
+                    <!--<i class="glyphicon glyphicon-ok"></i> 등록-->
+                    <i class="fas fa-check"></i> 등록  <!--1.10-->
                 </button>
             </div>
         </div>
@@ -52,10 +57,14 @@
             <td><input type="text" style="width:100%" name="birthday" value="{{birthday}}"/></td>
             <td>
                 <button class="btn btn-info btn-sm" name="save">
-                    <i class="glyphicon glyphicon-ok"></i> 저장
+                    <!--<i class="glyphicon glyphicon-ok"> 저장</i>-->
+                    <i class="fas fa-check"></i> 저장 <!--1.10-->
+
                 </button>
-                <button class="btn btn-default btn-sm" name="cancel">
-                    <i class="glyphicon glyphicon-repeat"></i> 취소
+                <!--<button class="btn btn-default btn-sm" name="cancel">-->
+                <button class="btn btn-light btn-sm" name="cancel">
+                    <!--<i class="glyphicon glyphicon-repeat"></i> 취소-->
+                    <i class="fas fa-redo-alt"></i> 취소 <!--1.10-->
                 </button>
             </td>
         </tr>
@@ -68,10 +77,12 @@
             <td><div class="edit-thing">{{birthday}}</div></td>
             <td>
                 <button class="btn btn-warning btn-sm" name="remove">
-                    <i class="glyphicon glyphicon-trash"></i> 삭제
+                    <!--<i class="glyphicon glyphicon-trash"></i> 삭제-->
+                    <i class="fas fa-trash"></i> 삭제 <!--1.10-->
                 </button>
                 <button class="btn btn-info btn-sm" name="modify">
-                    <i class="glyphicon glyphicon-wrench"></i> 수정
+                    <!--<i class="glyphicon glyphicon-wrench"></i> 수정-->
+                    <i class="fas fa-wrench"></i> 수정 <!--1.10-->
                 </button>
             </td>
         </tr>
